@@ -12,10 +12,11 @@
     />
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <nav class="navbar bg-body-tertiary">
+  <body class="bodyy" >
+    
+    <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand">Weather App By anshita</a>
+        <a class="white">Weather App By anshita</a>
         <form class="d-flex" role="search">
           <input
           id="city"
@@ -29,18 +30,18 @@
       </div>
     </nav>
    
-    <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
-    <main>
+    <main >
+      <h1 class="white">Weather for <span id="cityName"></span></h1>
       <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card">
             <div class="card-header py-3">
               <h4 class="my-0 fw-normal">Temperature</h4>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title">
                 <span id="temp2"></span>
-                <small class="text-muted fw-light">&#176C</small>
+                <small >&#176C</small>
               </h1>
               <ul class="list-unstyled mt-3 mb-4">
                 
@@ -50,17 +51,14 @@
                 <li>Min temp: <span id="min_temp">&#176C</span></li>
 
               </ul>
-              <button
-                type="search"
-                class="defination"
-              >
+              
               Temperature is the degree of hotness or coldness of an object
-              </button>
+              
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card">
             <div class="card-header py-3">
               <h4 class="my-0 fw-normal">Humidity Info</h4>
             </div>
@@ -76,17 +74,14 @@
                 
 
               </ul>
-              <button
-                type="search"
-                class="defination"
-              >
+              
               Humidity is the amount of water vapor in the air.
-              </button>
+            
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card">
             <div class="card-header py-3">
               <h4 class="my-0 fw-normal">Wind Speed Info</h4>
             </div>
@@ -101,12 +96,9 @@
                 <li>sunrise : <span id="sunrise"></span></li>
 
               </ul>
-              <button
-              type="search"
-              class="defination"
-            >
+             
             Wind speed describes how fast the air is moving past a certain point. 
-            </button>
+            
             </div>
           </div>
         </div>

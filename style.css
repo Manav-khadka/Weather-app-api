@@ -1,3 +1,12 @@
+
+.bodyy{
+    background-image: url("https://i.pinimg.com/originals/ac/b7/6b/acb76b4e8dba42cad53d2e71fd179e37.gif");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+}
+
 .weather-forecast{
     display: flex;
     flex-wrap: wrap;
@@ -36,3 +45,36 @@
     background: rgb(0, 0, 0);
     color: white;
 }
+.card {
+    background: rgba( 0, 0, 0, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.5px );
+    -webkit-backdrop-filter: blur( 11.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    overflow: hidden;
+  }
+  .navbar{
+    background: rgba( 0, 0, 0, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.5px );
+    -webkit-backdrop-filter: blur( 11.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    
+    overflow: hidden;
+  }
+  .white{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+  }
+ 
