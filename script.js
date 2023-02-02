@@ -1,3 +1,6 @@
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const options = {
   method: "GET",
   headers: {
@@ -23,7 +26,9 @@ getWeather = (city) => {
       humidity.innerHTML = response.humidity;
       humidity2.innerHTML = response.humidity;
       min_temp.innerHTML = response.min_temp;
+      // min_temp2.innerHTML = response.min_temp;
       max_temp.innerHTML = response.max_temp;
+      // max_temp2.innerHTML = response.max_temp;
       wind_speed.innerHTML = response.wind_speed;
       wind_speed2.innerHTML = response.wind_speed;
       wind_degrees.innerHTML = response.wind_degrees;
