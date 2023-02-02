@@ -1,22 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand">Weather App By anshita</a>
+        <form class="d-flex" role="search">
+          <input
+          id="city"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+   
+    <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Temperature</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                <span id="temp2"></span>
+                <small class="text-muted fw-light">&#176C</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                
+                <li>Temperature : <span id="temp">&#176C</span></li>
+                
+                <li>Max temp: <span id="max_temp">&#176C</span></li>
+                <li>Min temp: <span id="min_temp">&#176C</span></li>
 
-<img src="img_la.jpg" alt="LA" style="width:100%">
+              </ul>
+              <button
+                type="button"
+                class="w-100 btn btn-lg btn-outline-primary"
+              >
+                Sign up for free
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Humidity Info</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                <span id="humidity2"></span><small class="text-muted fw-light">%</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>humidity : <span id="humidity"></span>%</li>
+                <li>Feels like: <span id="feels_like"></span>&#176C</li>
+                <li>wind_degrees : <span id="wind_degrees"></span></li>
+                <!-- <li>cloud_pct : <span id="cloud_pct"></span></li> -->
+                
 
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
-</div>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Wind Speed Info</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                <span id="wind_speed2"></span><small class="text-muted fw-light">/KMPH</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                
+                <li>wind_speed : <span id="wind_speed"></span>/KMPH</li>
+                <li>sunset : <span id="sunset"></span></li>
+                <li>sunrise : <span id="sunrise"></span></li>
 
-</body>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="future-forecast">
+        <h1 class="my-4 text-center">Weekly Forecast</span></h1>
+        
+
+        <div class="weather-forecast" id="weather-forecast">
+          
+          <div class="weather-forecast-item">
+            <div class="day">Mon</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Max temp - 25.6° C</div>
+            <div class="temp">Day - 35.6° C</div>
+        </div>
+          <div class="weather-forecast-item">
+            <div class="day">Tue</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6° C</div>
+            <div class="temp">Day - 35.6° C</div>
+        </div>
+            <div class="weather-forecast-item">
+                <div class="day">Tue</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6° C</div>
+                <div class="temp">Day - 35.6° C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Wed</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6° C</div>
+                <div class="temp">Day - 35.6° C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thur</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6° C</div>
+                <div class="temp">Day - 35.6° C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Fri</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6° C</div>
+                <div class="temp">Day - 35.6° C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sat</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6° C</div>
+                <div class="temp">Day - 35.6° C</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+      <h2 class="display-6 text-center mb-4">Top cities Weather</h2>
+
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 20%"></th>
+              <th style="width: 8%">cloud_pct</th>
+              <th style="width: 8%">feels_like</th>
+              <th style="width: 8%">humidity</th>
+              <th style="width: 8%">max_temp</th>
+              <th style="width: 8%">min_temp</th>
+              <th style="width: 8%">sunset</th>
+              <th style="width: 8%">sunrise</th>
+              <th style="width: 8%">Temp</th>
+              <th style="width: 8%">wind_degrees</th>
+              <th style="width: 8%">wind_speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Kolkata</th>
+              
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              
+              
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Hyderabad</th>
+              
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              
+              
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Bhopal</th>
+              
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              
+              
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Punjab</th>
+              
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
